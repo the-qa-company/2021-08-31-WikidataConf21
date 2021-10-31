@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="icon" type="image/png" href="assets/Logo_EU_knowledgegraph.png"/>
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -19,15 +20,14 @@
 			<div class="slides">
 				<!-- First slide -->
 				<section ch="-1" style="position: relative; height: 100%;">
-					<h3 style="color: rgb(10,100,147); margin: 5%">The EU Knowledge Graph</h3>
-					<div style="font-size: 25px; padding-top: 25px;">Dennis Diefenbach (The QA Company)</div>
-					<div style="font-size: 25px; padding-top: 25px;">Max De Wilde (DG CNECT, European Commission)</div>
-					<div style="font-size: 25px; padding-top: 25px;">Anne Thollard (DG REGIO, European Commission)</div>
-					<div style="font-size: 25px; padding-top: 25px;">@Semantics 2021 (hybrid)</div>
-					<div style="font-size: 25px; padding-top: 25px;">07.09.2021</div>
+					<h3 style="color: rgb(10,100,147); margin: 2%; text-transform: none">The EU Knowledge Graph</h3>
+					<img src="assets/Logo_EU_knowledgegraph.png" style="margin-top: 2%; height: 90px; border: none; box-shadow: none;">
+					<div style="font-size: 25px; padding-top: 25px;">Dennis Diefenbach</div>
+					<div style="font-size: 25px; padding-top: 25px;">@WikidataConf 2021</div>
+					<div style="font-size: 25px; padding-top: 25px;">31.10.2021</div>
                     <img src="assets/logo_QA.png" style="margin-top: 5%; height: 100px; border: none; box-shadow: none;">
 					<!--<img src="http://commons.wikimedia.org/wiki/Special:FilePath/European%20Commission.svg" style="margin-top: 5%; height: 100px; border: none; box-shadow: none;">-->
-					<img src="assets/semantics-amsterdam-2021-2.png" style="margin-top: 5%; height: 70px; border: none; box-shadow: none; margin-left: 30px;">
+					<img src="assets/wikidataconf.png" style="margin-top: 5%; height: 100px; border: none; box-shadow: none; margin-left: 30px;">
 					<!--<h4>From BibTeX input:</h4>-->
 					<div id="key1" class="cite" data-type="bib" ></div>
 					<div id="key2" class="cite" data-type="bib" ></div>
@@ -36,7 +36,7 @@
 				<section ch="0">
 					<h2>Outline</h2>
 					<ol>
-						<li><a href="#/general"><div style="display: inline-block; background: darkcyan; width: 35px; height: 35px"></div> Infrastructure: Wikibase</a></li>
+						<li><a href="#/general"><div style="display: inline-block; background: darkcyan; width: 35px; height: 35px"></div> Wikibase</a></li>
 						<li><a href="#/EUKG"><div style="display: inline-block; background: rebeccapurple; width: 35px; height: 35px"></div> The EU Knowledge Graph</a></li>
 						<li><a href="#/kohesio"><div style="display: inline-block; background: #cd0027; width: 35px; height: 35px"></div> Kohesio</a></li>
 						<li><a href="#/conclusion"><div style="display: inline-block; background: orange; width: 35px; height: 35px"></div> Conclusion</a></li>
@@ -47,15 +47,18 @@
 				<section ch="1" id="general">
 					<h2>What is Wikibase?<div style="vertical-align: top; font-size: smaller; display: inline;"></div></h2>
 				</section>
-				<section ch="1">
-					<div>Wikimedia hosts many wikis...</div>
-					<img src="assets/wikimedia_projects.png" style="width: 60%;">
-				</section>
 				<section ch="1" data-background-iframe="https://www.wikidata.org/wiki/Q458" data-background-interactive>
-					<div style="margin-bottom: 90%">Wikidata is one of them!</div>
 				</section>
 				<section ch="1" data-background-iframe="https://wikiba.se" data-background-interactive>
 					<div style="margin-top: 40%">Wikibase is the software behind Wikidata</div>
+				</section>
+				<section ch="2">
+					<h3>Why using Wikibase?</h3>
+					<ul>
+						<li>We want a similar experience like Wikidata.</li>
+						<li>We want to ingest data that would not be accepted by Wikidata.</li>
+						<li>We want to have full control on the ontology.</li>
+					</ul>
 				</section>
 
 
@@ -70,7 +73,7 @@
 				</section>
 				<section>
 					<section ch="2">
-						<h3> Why using Wikibase?</h3>
+						<h3> What does Wikibase offer?</h3>
 					</section>
 					<section ch="2">
 						<div>User-friendly</div>
@@ -134,10 +137,10 @@
 						<div>Buildings</div>
 					</section>
 					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q19837" data-background-interactive>
-						<div>942.289 projects co-funded by the European Union</div>
+						<div>1.164.619 projects co-funded by the European Union</div>
 					</section>
 					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q2509317" data-background-interactive>
-						<div>257.784 beneficiaries of EU funds</div>
+						<div>340.283 beneficiaries of EU funds</div>
 					</section>
 					<section ch="2" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q2837746" data-background-interactive>
 						<div>Linked Data Solutions</div>
@@ -196,6 +199,22 @@
 						<h3 style="text-transform: none;">WikidataUpdater</h3>
 						<div>A bot that checks that the data is synchronised</div>
 						<div>Refreshed every 5 minutes!</div>
+					</section>
+				</section>
+				<section>
+					<section ch="2">
+						<h3> WikibaseSync</h3>
+					</section>
+
+					<section ch="2">
+						<h3>What it is?</h3>
+						<ul>
+							<li>Similar to WikibaseImport but ...</li>
+							<li>It is a Pywikibot bot, so you do not need access to the machine!</li>
+							<li>It can sync items and properties.</li>
+						</ul>
+					</section>
+					<section ch="2" data-background-iframe="https://github.com/the-qa-company/WikibaseSync" data-background-interactive>
 					</section>
 				</section>
 				<section>
@@ -271,7 +290,7 @@
 						<li>Linking NUTS regions and beneficiaries with Wikidata</li>
 					</ol>
 				</section>
-				<section ch="3" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q77409" data-background-interactive>
+				<section ch="3" data-background-iframe="https://linkedopendata.eu/wiki/Item:Q11724" data-background-interactive>
 				</section>
 				<section ch="3">
 					<h2>Build a website for citizens on top</h2>
